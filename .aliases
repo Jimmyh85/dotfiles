@@ -20,3 +20,5 @@ alias -g G='| grep'
 alias -g F='| fzf'
 alias -g W='| wc -l'
 
+# Ignored aliases for globalias expansions
+GLOBALIAS_FILTER_VALUES=(l ls)

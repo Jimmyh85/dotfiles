@@ -1,6 +1,6 @@
 # My dotfiles currently used on my WSL2 setup (Work in Progress)
 
-Info: Dotfiles are version controled via the technique described in https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
+Info: Dotfiles are version controlled via the technique described in https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
 
 ## Prepare WSL2
 
@@ -24,6 +24,8 @@ Tools:
 - build-essential
 - rust
 - exa (`cargo install exa`)
+- dust (`cargo install du-dust`)
+- net-tools
 
 Links:
 

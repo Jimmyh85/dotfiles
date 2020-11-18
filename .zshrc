@@ -113,9 +113,10 @@ _fzf_compgen_dir() {
 
 plugins=(
 	git 
-        docker
+    docker
 #	aws
 	fasd
+    globalias
 	fzf
 	fzf-tab
 	zsh-completions
@@ -175,7 +176,7 @@ autoload -U compinit && compinit
 eval "$(fasd --init posix-alias zsh-hook)"
 
 # Set default editor to vim
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 export NVM_DIR="$HOME/.nvm"
