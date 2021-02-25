@@ -1,0 +1,152 @@
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+"set argtextobj
+"set easymotion
+"set textobj-entire
+"set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+"let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set incsearch   " Highlight search results when typing
+set hlsearch    " Highlight search results
+set ignorecase  " Ignore case when searching
+set smartcase   " In case there is an uppercase in the search term
+set number
+set relativenumber
+set timeout
+set timeoutlen=250
+
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=8
+
+" Yank to/paste from system clipboard
+set clipboard+=unnamedplus
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+
+" Map leader to space ---------------------
+let mapleader=" "
+
+" Remap German umlauts for easier access
+map ü <C-]>
+map ö [
+map ä ]
+map Ö {
+map Ä }
+map ß /
+
+" More natural escape movements
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Move selected line/block of text in visual mode
+vnoremap J :action MoveLineDown<CR>
+vnoremap K :action MoveLineUp<CR>
+
+"nnoremap J :m +1<CR>
+"nnoremap K :m -2<CR>
+"inoremap J <Esc>:m +1<CR>gi
+"inoremap K <Esc>:m -2<CR>gi
+
+" Clear search results
+nnoremap <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" have x (removes single character) not go into the default registry
+nnoremap x "_x
+
+" Make X an operator that removes without placing text in the default registry
+nmap X "_d
+nmap XX "_dd
+vmap X "_d
+vmap x "_d
+
+" Just to beginning and end of lines easier. From http://vimbits.com/bits/16
+noremap H ^
+noremap L $
+
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
+
+"map <leader>f <Plug>(easymotion-s)
+"map <leader>e <Plug>(easymotion-f)
+
+
+" Pasting from yank history
+nnoremap <leader>y :action PasteMultiple<CR>
+
+" Refactorings
+nnoremap <leader>oi :action OptimizeImports<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rf :action RenameFile<CR>
+nnoremap <leader>ri :action Inline<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>im :action ImplementMethods<CR>
+nnoremap <leader>om :action OverrideMethods<CR>
+
+" QuickFix
+nnoremap <leader>qf :action ShowIntentionActions<CR>
+
+" Format code
+nnoremap <leader>F :action ReformatCode<CR>
+
+" Test and Run
+nnoremap <leader>gt :action GotoTest<CR>
+nnoremap <leader>tn :action RunClass<CR>
+nnoremap <leader>tl :action Rerun<CR>
+nnoremap <leader>tf :action RerunFailedTests<CR>
+
+" Undo
+nnoremap <leader>uh :action LocalHistory.ShowHistory<CR>
+
+" Jumping
+" built-in navigation to navigated items works better
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+" Navigation
+nnoremap ]c :action GotoNextError<CR>
+nnoremap [c :action GotoPreviousError<CR>
+"map <S-Space> <Action>(GotoNextError)  " Check which mapping to use
+
+nnoremap ]h :action VcsShowNextChangeMarker<CR>
+nnoremap [h :action VcsShowPrevChangeMarker<CR>
+
+" Easier access to CompleteCurrentStatement
+inoremap <leader><CR> <Action>(EditorCompleteStatement)
+nnoremap <leader><CR> <Action>(EditorCompleteStatement)
+"map <leader><CR> <Action>(EditorCompleteStatement)
+
+
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+

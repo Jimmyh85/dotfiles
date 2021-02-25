@@ -9,6 +9,7 @@ alias remove='sudo apt-get remove --purge'
 alias vi='nvim'
 alias vf='nvim $(fzf)' # open files with nvim via fzf
 alias v='f -e nvim' # quick opening known files with nvim
+alias python='python3'
 
 # file system
 alias l='exa -lahg'
@@ -22,3 +23,4 @@ alias -g W='| wc -l'
 
 # Ignored aliases for globalias expansions
 GLOBALIAS_FILTER_VALUES=(l ls)
+
