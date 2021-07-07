@@ -2,11 +2,14 @@
 
 Info: Dotfiles are synced with GNU Stow [How To](https://www.youtube.com/watch?v=CFzEuBGPPPg&t=2053s&ab_channel=DevInsideYou)
 1. Clone and cd into this repo
-2. Run `stow -vSt ~ *` to unstow everything or pick the configuration explicitly e.g. `stow -vSt ~ zsh`
+2. Run `stow -vSt ~ *` to copy over all package configurations or pick the configuration explicitly e.g. `stow -vSt ~ zsh`
 
-In order to stow configuration files 
+In order to stow new configuration files 
 1. Create correct folder structure in package folder within the .dotfiles directory
 2. Run `stow --adopt -vt ~ */`
+
+Note
+> If unsure about the stow commands, run them with the option flag -n for simulation mode, e.g. `stow --adopt -nvt ~ *`
 
 ## Prepare WSL2
 
