@@ -1,0 +1,24 @@
+# https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
+#alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# ubuntu
+alias install='sudo apt-get install'
+alias remove='sudo apt-get remove --purge'
+
+# executables
+alias vi='nvim'
+alias python='python3'
+
+# file system
+alias l='exa -lahg'
+
+# Global aliases
+alias -g L='| less'
+alias -g H='| head'
+alias -g G='| grep'
+alias -g F='| fzf'
+alias -g W='| wc -l'
+
+# Ignored aliases for globalias expansions
+GLOBALIAS_FILTER_VALUES=(l ls)
+

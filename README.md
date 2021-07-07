@@ -1,6 +1,12 @@
 # My dotfiles currently used on my WSL2 setup (Work in Progress)
 
-Info: Dotfiles are version controlled via the technique described in https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b
+Info: Dotfiles are synced with GNU Stow [How To](https://www.youtube.com/watch?v=CFzEuBGPPPg&t=2053s&ab_channel=DevInsideYou)
+1. Clone and cd into this repo
+2. Run `stow -vSt ~ *` to unstow everything or pick the configuration explicitly e.g. `stow -vSt ~ zsh`
+
+In order to stow configuration files 
+1. Create correct folder structure in package folder within the .dotfiles directory
+2. Run `stow --adopt -vt ~ */`
 
 ## Prepare WSL2
 
@@ -15,6 +21,7 @@ Info: Dotfiles are version controlled via the technique described in https://med
 
 Tools:
 
+- stow
 - fd (fd-find)
 - bat (batcat)
 - ripgrep
@@ -26,6 +33,12 @@ Tools:
 - exa (`cargo install exa`)
 - dust (`cargo install du-dust`)
 - net-tools
+- neovim 0.5 (with LunarVim configuration)
+- jq
+- node
+- npm
+- python3
+- java 
 
 Links:
 
